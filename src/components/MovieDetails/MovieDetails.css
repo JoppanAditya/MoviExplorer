@@ -1,0 +1,378 @@
+.Detailpg-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.Detailpg-container h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.Detailpg-container p,
+span {
+  margin: 0;
+  color: var(--clr-dark-slate);
+}
+
+.Detailpg-header-container {
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 450px;
+  padding: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Detailpg-header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--clr-light), transparent);
+}
+
+.Detailpg-container .swiper {
+  --swiper-navigation-color: var(--clr-light);
+  --swiper-pagination-color: var(--clr-primary);
+}
+
+.Detailpg-container .swiper-button-prev,
+.Detailpg-container .swiper-button-next {
+  color: var(--clr-light);
+  margin: 40px;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.Detailpg-container .swiper-button-prev:hover,
+.Detailpg-container .swiper-button-next:hover {
+  color: var(--clr-primary);
+}
+
+.Detailpg-container .swiper-pagination {
+  position: relative !important;
+  max-width: 1340px;
+  padding-right: 40px;
+  margin: 0 auto;
+  top: -110px !important;
+  text-align: end !important;
+}
+
+.Detailpg-content-container {
+  position: relative;
+  background-color: var(--clr-light);
+  border-radius: 15px 15px 0 0;
+  padding: 30px;
+  max-width: 1280px;
+  width: 100%;
+  margin: -100px auto 0;
+  z-index: 1;
+}
+
+.Content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2fr);
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.Content-left {
+  padding: 0 15px;
+}
+
+.Content-left .Detailpg-movie-info {
+  display: block;
+}
+
+.Detailpg-img {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  aspect-ratio: 0.667;
+  width: 100%;
+}
+
+.Detailpg-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.Watch-movie,
+.Watch-trailer {
+  width: 100%;
+  background: var(--clr-dark);
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.Watch-movie a,
+.Watch-trailer {
+  color: var(--clr-light);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.Watch-movie a:hover {
+  color: var(--clr-primary);
+}
+
+.Watch-movie {
+  border-radius: 0 0 10px 10px;
+}
+
+.Watch-trailer {
+  border-radius: 10px;
+  border: none;
+}
+
+.Watch-trailer:hover {
+  background: var(--clr-dark-100);
+  cursor: pointer;
+  color: var(--clr-primary);
+}
+
+.Detailpg-movie-status,
+.Detailpg-movie-rating,
+.Detailpg-movie-genres,
+.Detailpg-movie-runtime,
+.Detailpg-movie-prod,
+.Detailpg-movie-director,
+.Detailpg-movie-budget {
+  width: 100%;
+  border-bottom: 1px solid var(--clr-light-200);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.Content-right {
+  padding: 0 15px;
+}
+
+.Content-right .Detailpg-movie-info {
+  display: none;
+}
+
+.Content-left h2,
+.Content-right h2 {
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+.Detailpg-movie-status,
+.Detailpg-movie-title,
+.Detailpg-movie-cast,
+.Detailpg-movie-crew,
+.Detailpg-movie-release,
+.Detailpg-movie-overview,
+.Detailpg-movie-director,
+.Detailpg-movie-budget,
+.Detailpg-movie-revenue {
+  margin-bottom: 32px;
+}
+
+.Detailpg-movie-title h1 {
+  font-size: 32px;
+  margin: 0 0 4px;
+}
+
+.Detailpg-movie-title span {
+  color: var(--clr-dark-slate);
+}
+
+.Detailpg-movie-title h2 {
+  font-weight: 600;
+  margin: 0;
+  color: var(--clr-dark-slate);
+}
+
+.Detailpg-movie-tagline {
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.Detailpg-movie-overview p {
+  line-height: 1.7rem;
+}
+
+.Cast-name,
+.Crew-name {
+  margin: 0;
+}
+
+.Similar-card {
+  width: 200px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--clr-light-200);
+  border-radius: 10px;
+  margin: 10px 0 10px 10px;
+}
+
+.Similar-card:last-child {
+  margin-right: 0;
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .Detailpg-container .swiper-button-prev,
+  .Detailpg-container .swiper-button-next {
+    margin: 20px;
+  }
+
+  .Detailpg-container .swiper-pagination {
+    padding: 0 40px;
+  }
+
+  .Detailpg-content-container {
+    border-radius: 0;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+  .Detailpg-container .swiper-pagination {
+    padding-right: 15px;
+    top: -130px !important;
+  }
+
+  .Detailpg-container .swiper-slide .Detailpg-header-container::before {
+    background-image: linear-gradient(to right, var(--clr-dark-200), transparent);
+  }
+
+  .Detailpg-header-container {
+    height: 305px;
+  }
+
+  .Header-img {
+    height: 400px;
+  }
+
+  .Detailpg-container .swiper-button-prev,
+  .Detailpg-container .swiper-button-next {
+    margin: 10px;
+  }
+
+  .Detailpg-content-container {
+    border-radius: 0;
+    padding: 0 15px;
+  }
+
+  .Content-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .Content-left {
+    padding: 0;
+  }
+
+  .Detailpg-movie-title h1,
+  .Detailpg-movie-title span {
+    font-size: 28px;
+  }
+
+  .Content-left h2,
+  .Content-right h2 {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  .Detailpg-img {
+    margin: 0 0 32px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Img-wrapper {
+    position: absolute;
+    top: -16rem;
+    width: 150px;
+    margin-left: 15px;
+  }
+
+  .Img-wrapper img {
+    border-radius: 10px;
+  }
+
+  .Watch-movie {
+    border-radius: 0;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .Watch-trailer {
+    border-radius: 0;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .Detailpg-img .Watch-trailer:hover {
+    background: var(--clr-dark-200);
+  }
+
+  .Content-left .Detailpg-movie-info {
+    display: none;
+  }
+
+  .Content-right .Detailpg-movie-info {
+    display: block;
+  }
+
+  .Similar-card {
+    width: 165px;
+  }
+}
+
+.dark-mode .Watch-movie,
+.dark-mode .Watch-trailer {
+  background-color: var(--clr-dark-200);
+}
+
+.dark-mode .Watch-trailer:hover {
+  background: var(--clr-dark-300);
+  cursor: pointer;
+  color: var(--clr-primary);
+}
+
+.dark-mode .Detailpg-header-container::before {
+  background-image: linear-gradient(to top, var(--clr-dark-100), transparent);
+}
+
+.dark-mode .Detailpg-container p,
+.dark-mode .Detailpg-container span,
+.dark-mode .Detailpg-movie-title h2 {
+  color: var(--clr-light-slate);
+}
+
+.dark-mode .Detailpg-movie-status,
+.dark-mode .Detailpg-movie-rating,
+.dark-mode .Detailpg-movie-genres,
+.dark-mode .Detailpg-movie-runtime,
+.dark-mode .Detailpg-movie-prod,
+.dark-mode .Detailpg-movie-director,
+.dark-mode .Detailpg-movie-budget {
+  border-bottom: 1px solid var(--clr-dark-300);
+}
+
+.dark-mode .Detailpg-container .swiper {
+  --swiper-pagination-color: var(--clr-primary);
+}
+
+.dark-mode .Detailpg-content-container {
+  background: var(--clr-dark-100);
+  border-top: 1px solid var(--clr-dark-200);
+}
+
+.dark-mode .Similar-card {
+  border: 1px solid var(--clr-dark-300);
+}

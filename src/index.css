@@ -1,0 +1,52 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --clr-dark: #2e3440;
+  --clr-light: #eceff4;
+  --clr-dark-100: #3b4252;
+  --clr-dark-200: #434c5e;
+  --clr-dark-300: #4c566a;
+  --clr-dark-slate: #545e72;
+  --clr-light-100: #e5e9f0;
+  --clr-light-200: #d8dee9;
+  --clr-light-slate: #c2c8d6;
+  --clr-primary: #88c0d0;
+  --clr-primary-darker: #5e81ac;
+  --clr-red: #bf616a;
+  --clr-yellow: #ebcb8b;
+  --clr-bright-yellow: #f5c518;
+  --clr-green: #a3be8c;
+  --clr-lightGrey: #d7dce6;
+}
+
+*,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+  min-height: 100%;
+}
+
+html.dark-mode {
+  color: var(--clr-light);
+  background-color: var(--clr-dark-100);
+}

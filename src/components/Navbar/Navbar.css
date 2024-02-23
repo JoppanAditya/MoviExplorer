@@ -1,0 +1,415 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: top 0.3s ease;
+  background: var(--clr-dark);
+}
+
+.hidden {
+  top: -60px;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  max-width: 1385px;
+  margin: auto;
+}
+
+.Container-left {
+  display: flex;
+  align-items: center;
+}
+
+.Container-right .Nav-links {
+  font-size: 20px;
+}
+
+.Container-right .Nav-links li:last-child {
+  color: var(--clr-primary);
+}
+
+.Container-right .Nav-links li:last-child:hover {
+  color: var(--clr-primary-darker);
+}
+
+.Nav-logo,
+.Nav-logo a {
+  margin: 0;
+  color: var(--clr-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.Nav-logo img {
+  content: url(../../assets/MovieXplorer.svg);
+  height: 32px;
+  margin-right: 16px;
+}
+
+.Nav-logo span {
+  color: var(--clr-primary);
+}
+
+.Nav-links,
+.Nav-links a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-decoration: none;
+  color: var(--clr-light);
+  font-weight: 600;
+}
+
+.Nav-links li {
+  margin-right: 40px;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.Nav-links a {
+  transition: color 0.2s ease;
+}
+
+.Nav-links li:last-child {
+  margin-right: 0;
+}
+
+.Nav-links li:hover,
+.Nav-links a:hover {
+  color: var(--clr-primary);
+}
+
+/* Sidebar styling */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  color: var(--clr-light);
+  font-size: larger;
+  margin-right: 20px;
+  transition: color 0.2ss ease;
+}
+
+.hamburger-menu:hover {
+  color: var(--clr-primary);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 290px;
+  height: 100%;
+  background-color: var(--clr-dark);
+  transition: all 0.3s ease;
+  z-index: 102;
+}
+
+.sidebar .row {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .Nav-links {
+  position: relative;
+  margin-top: 16px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  transition: color 0.5 ease;
+  width: 100%;
+}
+
+.sidebar .Nav-links li {
+  position: relative;
+  padding: 16px 40px;
+  margin-bottom: 8px;
+  width: 72%;
+}
+
+.sidebar .Nav-links li:active {
+  background-color: var(--clr-dark-slate);
+}
+
+.dark-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(222, 16%, 12%, 0.8);
+  z-index: 101;
+}
+
+.close-btn {
+  position: relative;
+  cursor: pointer;
+  color: var(--clr-light);
+  font-size: larger;
+  transition: color 0.2s ease;
+  margin-right: 20px;
+}
+
+.close-btn:hover {
+  color: var(--clr-red);
+}
+
+.Container-right li.Notif-icon {
+  position: relative;
+}
+
+.Notification-box {
+  position: absolute;
+  max-width: 300px;
+  width: max-content;
+  top: 2.7rem;
+  right: -1.1rem;
+  background-color: var(--clr-light);
+  border: 1px solid var(--clr-light-slate);
+  border-radius: 5px;
+  padding: 16px;
+  box-shadow: 0 0 5px #0000001a;
+  color: var(--clr-dark);
+  font-size: 16px;
+}
+
+.Notification-box span {
+  color: var(--clr-dark-slate);
+  margin-left: 4px;
+}
+
+.Notification-box::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 5px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--clr-light) transparent;
+  transform: translateX(-50%);
+}
+
+.Search-box {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  transition: 0.5;
+  margin: 45px auto 0;
+  background: var(--clr-light);
+  display: none;
+}
+
+.Input-container,
+.Result-wrapper,
+.Result-title {
+  border-bottom: 1px solid var(--clr-lightGrey);
+}
+
+.Input-input {
+  max-width: 1385px;
+  padding: 12px 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Result-wrapper:hover {
+  background: var(--clr-light-100);
+}
+
+.Input-result {
+  max-width: 1385px;
+  padding: 4px 40px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Result-title {
+  background: var(--clr-light-100);
+}
+
+.Search-box .Result-wrapper .Input-result li,
+.Search-box .Result-wrapper .Input-result li a,
+.Search-box .Result-title .Input-result li {
+  list-style: none;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--clr-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Search-box .Result-title .Input-result li {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Result-title svg {
+  margin-right: 10px;
+}
+
+.Search-box .Result-title .Input-result li:hover {
+  cursor: default;
+  color: var(--clr-dark);
+}
+
+.Search-box .Result-wrapper .Input-result li:hover {
+  color: var(--clr-dark);
+}
+
+.Input-input svg {
+  color: var(--clr-dark-slate);
+  cursor: pointer;
+}
+
+.Input-input svg:hover {
+  color: var(--clr-dark);
+}
+
+.Search-box.show {
+  display: block;
+}
+
+.Search-result.show {
+  display: block;
+}
+.Search-result.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hidden {
+    top: -65px;
+  }
+
+  .Nav-logo img {
+    height: 24px;
+  }
+
+  .Nav-logo a {
+    font-size: 20px;
+  }
+
+  .Container {
+    padding: 16px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .Container-center .Nav-links {
+    display: none;
+  }
+
+  .Container-right .Nav-links li {
+    margin-right: 20px;
+    font-size: large;
+  }
+
+  .Container-right .Nav-links li:last-child {
+    margin-right: 0;
+  }
+
+  .Container-left {
+    position: relative;
+  }
+
+  .Input-input {
+    padding: 12px 20px;
+  }
+
+  .Input-result {
+    padding: 6px 20px;
+  }
+
+  .Notification-box {
+    right: -1.1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Container-right .Nav-links li {
+    margin-right: 32px;
+    font-size: large;
+  }
+
+  .Container-right .Nav-links li:last-child {
+    margin-right: 0;
+  }
+
+  .hamburger-menu {
+    margin-right: 32px;
+  }
+}
+
+.dark-mode .Search-box {
+  background: var(--clr-dark-100);
+}
+
+.dark-mode .Result-title {
+  background: var(--clr-dark-200);
+}
+
+.dark-mode .Input-container,
+.dark-mode .Result-wrapper,
+.dark-mode .Result-title {
+  border-bottom: 1px solid var(--clr-dark-300);
+}
+
+.dark-mode .Result-wrapper:hover {
+  background: var(--clr-dark-200);
+}
+
+.dark-mode .Search-box .Result-wrapper .Input-result li,
+.dark-mode .Search-box .Result-wrapper .Input-result li a,
+.dark-mode .Search-box .Result-title .Input-result li {
+  color: var(--clr-light);
+}
+
+.dark-mode .Search-box .Result-wrapper .Input-result li:hover {
+  color: var(--clr-light);
+}
+
+.dark-mode .Input-container .Input-input input,
+.dark-mode .Input-input svg {
+  color: var(--clr-light-slate);
+}
+
+.dark-mode .Input-input svg:hover {
+  color: var(--clr-light);
+}
+
+.dark-mode .Notification-box {
+  background-color: var(--clr-dark-200);
+  border: 1px solid var(--clr-dark-300);
+  color: var(--clr-light);
+}
+
+.dark-mode .Notification-box span {
+  color: var(--clr-light-slate);
+}
+
+.dark-mode .Notification-box::before {
+  border-color: transparent transparent var(--clr-dark-200) transparent;
+}

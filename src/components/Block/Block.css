@@ -1,0 +1,5 @@
+.Block {
+  background-color: var(--clr-dark);
+  width: 100%;
+  height: 60px;
+}

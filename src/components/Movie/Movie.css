@@ -1,0 +1,91 @@
+.Movies-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-dark-slate);
+  font-size: 16px;
+  max-width: 250px;
+}
+
+.Movies-card .Img-container {
+  margin-bottom: 8px;
+}
+
+.Movie-title,
+.Movie-info a {
+  font-size: 20px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 15rem;
+  color: var(--clr-dark);
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
+.Movie-title:hover {
+  color: var(--clr-primary-darker);
+  cursor: pointer;
+}
+
+.Movie-rate {
+  height: 3.5rem;
+  width: 3.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: -1.2rem;
+  top: -1.5rem;
+  z-index: 2;
+}
+
+.Movie-rate svg {
+  height: 100%;
+  width: 100%;
+  color: var(--clr-bright-yellow);
+}
+
+.Movie-rate p {
+  position: absolute;
+  color: var(--clr-dark);
+  font-weight: bold;
+  top: 18px;
+}
+
+@media (max-width: 768px) {
+  .Movie-title {
+    font-size: 16px;
+  }
+
+  .Movie-date {
+    font-size: 14px;
+  }
+
+  .Movie-rate {
+    height: 2.5rem;
+    width: 2.5rem;
+    right: -1.2rem;
+    top: -1.2rem;
+  }
+
+  .Movie-rate p {
+    font-size: 12px;
+    margin-top: 4px;
+    top: 8px;
+  }
+}
+
+.dark-mode .Movies-card {
+  color: var(--clr-light-slate);
+}
+
+.dark-mode .Movie-title,
+.dark-mode .Movie-info a {
+  color: var(--clr-light);
+}
+
+.dark-mode .Movie-title:hover {
+  color: var(--clr-primary);
+  cursor: pointer;
+}

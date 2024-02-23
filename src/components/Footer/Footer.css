@@ -1,0 +1,17 @@
+.Footer-container {
+  background-color: var(--clr-dark);
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.Footer-wrapper {
+  padding: 16px;
+  color: var(--clr-light);
+}
+
+.Footer-container svg {
+  color: var(--clr-red);
+}

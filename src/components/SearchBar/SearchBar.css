@@ -1,0 +1,18 @@
+input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: var(--clr-dark-slate);
+  outline: none;
+  margin: auto 0;
+  font-size: 16px;
+}
+
+.Search-movie input:focus {
+  outline: none;
+}
+
+.dark-mode input {
+  color: var(--clr-light-slate);
+}

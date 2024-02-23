@@ -1,0 +1,66 @@
+.Video-container {
+  position: fixed;
+  height: 0;
+  width: 100vw;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  background-color: hsla(213, 32%, 52%, 0.5);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.Overlay {
+  margin: auto 0;
+  aspect-ratio: 16/9;
+  height: 75%;
+  width: auto;
+  position: relative;
+}
+
+.Overlay-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--clr-dark);
+  border-radius: 15px 15px 0 0;
+}
+
+.Overlay .Overlay-info h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--clr-light);
+}
+
+.Overlay-info svg {
+  font-size: 1.5rem;
+  color: var(--clr-light-slate);
+}
+
+.Overlay-info svg:hover {
+  color: var(--clr-red);
+  cursor: pointer;
+}
+
+.Overlay-content {
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 15px 15px;
+}
+
+@media (max-width: 1200px) {
+  .Overlay {
+    width: 95%;
+    height: auto;
+  }
+}
